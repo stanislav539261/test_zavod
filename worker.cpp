@@ -26,9 +26,11 @@ Worker::Worker(
 void Worker::doWork() {
     constexpr auto MIN_DELAY = 1u;
 
-    auto number = std::numeric_limits<quint32>::max();
+    auto number = 0u;
 
     while (counter.fetchAndAddRelaxed(1) < maxIterCount) {
+        number = QRandomGenerator::global()->bounded(1, 10);
+
         if (abort.loadRelaxed()) {
             updateTable(
                 number,
@@ -48,8 +50,6 @@ void Worker::doWork() {
             );
             return;
         }
-
-        number = QRandomGenerator::global()->bounded(1, 10);
 
         QThread::sleep(MIN_DELAY == maxDelay ? MIN_DELAY : QRandomGenerator::global()->bounded(MIN_DELAY, maxDelay));
     }
