@@ -19,6 +19,34 @@
         <source>Work result</source>
         <translation>Результат работы</translation>
     </message>
+    <message>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation>Старт</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation>Стоп</translation>
+    </message>
+    <message>
+        <source>Number of threads</source>
+        <translation>Кол-во потоков</translation>
+    </message>
+    <message>
+        <source>Number of iterations</source>
+        <translation>Кол-во итераций</translation>
+    </message>
+    <message>
+        <source>Find number</source>
+        <translation>Найти число</translation>
+    </message>
+    <message>
+        <source>Delay</source>
+        <translation>Задержка</translation>
+    </message>
 </context>
 <context>
     <name>Worker</name>
@@ -28,7 +56,7 @@
     </message>
     <message>
         <source>Max number of iterations reached</source>
-        <translation>Достигнуто макс. количество итераций</translation>
+        <translation>Достигнуто макс. кол-во итераций</translation>
     </message>
     <message>
         <source>Number is found in range (1 - 10)</source>
